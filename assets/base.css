@@ -498,8 +498,7 @@ p:empty {
   grid-column: 1 / -1;
 
   @media screen and (min-width: 750px) {
-    padding-left: var(--page-margin);
-    padding-right: var(--page-margin);
+    padding-inline: var(--page-margin);
   }
 }
 
@@ -2444,7 +2443,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 
 .field__input {
   flex-grow: 1;
-  text-align: left;
+  text-align: start;
   border-radius: var(--style-border-radius-inputs);
   transition: box-shadow var(--animation-speed) ease, background-color var(--animation-speed) ease;
   padding: var(--input-padding);
@@ -2477,7 +2476,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 .field__label {
   color: rgb(var(--color-input-text-rgb) / var(--opacity-80));
   font-size: var(--font-paragraph--size);
-  left: var(--input-padding-x);
+  inset-inline-start: var(--input-padding-x);
   top: 50%;
   transform: translateY(-50%);
   margin-bottom: 0;
@@ -2820,7 +2819,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 }
 
 .pills__pill--swatch .swatch {
-  margin-right: -4px;
+  margin-inline-end: -4px;
 }
 
 .pills__pill--desktop-small {
