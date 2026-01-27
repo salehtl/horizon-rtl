@@ -12,9 +12,36 @@
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
+        "text_Dbw7YB": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>New arrivals</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "logo_AMgter": {
           "type": "logo",
           "name": "t:names.logo",
+          "disabled": true,
           "settings": {
             "inverse": true,
             "font": "heading",
@@ -49,6 +76,7 @@
         }
       },
       "block_order": [
+        "text_Dbw7YB",
         "logo_AMgter",
         "button_H9gpTf"
       ],
