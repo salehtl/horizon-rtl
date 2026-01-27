@@ -639,4 +639,13 @@
     --cart-secondary-font-style: var(--font-{{ settings.cart_price_font }}--style);
     --cart-secondary-font-weight: var(--font-{{ settings.cart_price_font }}--weight);
   }
+
+  {%- if is_rtl -%}
+    :root {
+      --font-body--family: 'Almarai', sans-serif;
+      --font-heading--family: 'Almarai', sans-serif;
+      --font-subheading--family: 'Almarai', sans-serif;
+      --font-accent--family: 'Almarai', sans-serif;
+    }
+  {%- endif -%}
 {% endstyle %}

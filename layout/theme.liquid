@@ -1,9 +1,17 @@
 <!doctype html>
+{%- liquid
+  assign rtl_locales = 'ar,he,fa,ur' | split: ','
+  assign is_rtl = false
+  if rtl_locales contains request.locale.iso_code
+    assign is_rtl = true
+  endif
+-%}
 <html
   {% if request.design_mode %}
     class="shopify-design-mode"
   {% endif %}
   lang="{{ request.locale.iso_code }}"
+  dir="{% if is_rtl %}rtl{% else %}ltr{% endif %}"
 >
   <head>
     {%- if settings.favicon != blank -%}
@@ -27,9 +35,15 @@
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
     {%- render 'fonts' -%}
+    {%- if is_rtl -%}
+      {%- render 'font-arabic' -%}
+    {%- endif -%}
     {%- render 'scripts' -%}
-    {%- render 'theme-styles-variables' -%}
+    {%- render 'theme-styles-variables', is_rtl: is_rtl -%}
     {%- render 'color-schemes' -%}
+    {%- if is_rtl -%}
+      {{ 'rtl-overrides.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}

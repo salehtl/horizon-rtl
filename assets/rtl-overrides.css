@@ -1,0 +1,141 @@
+/*
+ * RTL (Right-to-Left) Override Styles
+ * This file is conditionally loaded for RTL locales (Arabic, Hebrew, Farsi, Urdu)
+ * Contains fixes for components that cannot use CSS logical properties
+ */
+
+/* Mirror directional icons in RTL */
+[dir="rtl"] .icon-arrow-right svg,
+[dir="rtl"] .icon-arrow-left svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .icon-chevron-right svg,
+[dir="rtl"] .icon-chevron-left svg {
+  transform: scaleX(-1);
+}
+
+/* Flip caret icons for RTL reading direction */
+[dir="rtl"] .icon-caret svg {
+  transform: scaleX(-1);
+}
+
+/* Reverse slider navigation button order */
+[dir="rtl"] .slider-nav-prev {
+  order: 2;
+}
+
+[dir="rtl"] .slider-nav-next {
+  order: 1;
+}
+
+/* Slideshow navigation adjustments */
+[dir="rtl"] .slideshow__controls {
+  flex-direction: row-reverse;
+}
+
+/* Carousel/Slider scroll direction */
+[dir="rtl"] .carousel,
+[dir="rtl"] .slider {
+  scroll-snap-type: x mandatory;
+}
+
+/* Fix any remaining float-based layouts */
+[dir="rtl"] .float-left {
+  float: right;
+}
+
+[dir="rtl"] .float-right {
+  float: left;
+}
+
+/* Breadcrumb separator direction */
+[dir="rtl"] .breadcrumb__separator svg {
+  transform: scaleX(-1);
+}
+
+/* Product media thumbnail navigation */
+[dir="rtl"] .product-media-thumbnails__nav-prev,
+[dir="rtl"] .product-media-thumbnails__nav-next {
+  transform: scaleX(-1);
+}
+
+/* Pagination arrows */
+[dir="rtl"] .pagination__arrow svg {
+  transform: scaleX(-1);
+}
+
+/* Search input icon positioning adjustment if needed */
+[dir="rtl"] .search__icon {
+  transform: scaleX(-1);
+}
+
+/* Quantity selector buttons */
+[dir="rtl"] .quantity__button--minus,
+[dir="rtl"] .quantity__button--plus {
+  /* Ensure proper order in RTL */
+}
+
+/* Disclosure/Accordion expand icons */
+[dir="rtl"] .disclosure__toggle .icon-caret svg {
+  transform: scaleX(-1);
+}
+
+/* Menu drawer slide direction */
+[dir="rtl"] .menu-drawer {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .menu-drawer[open] {
+  transform: translateX(0);
+}
+
+/* Cart drawer slide direction */
+[dir="rtl"] .cart-drawer {
+  transform: translateX(100%);
+}
+
+[dir="rtl"] .cart-drawer[open] {
+  transform: translateX(0);
+}
+
+/* Back button icon flip */
+[dir="rtl"] .back-button svg,
+[dir="rtl"] .button--back svg {
+  transform: scaleX(-1);
+}
+
+/* External link icon */
+[dir="rtl"] .icon-external-link svg {
+  transform: scaleX(-1);
+}
+
+/* Share button icons */
+[dir="rtl"] .share-button__icon svg {
+  transform: scaleX(-1);
+}
+
+/* List markers alignment */
+[dir="rtl"] ul:not(.list-unstyled),
+[dir="rtl"] ol:not(.list-unstyled) {
+  padding-inline-start: 1.5em;
+  padding-inline-end: 0;
+}
+
+/* Table scroll indicator */
+[dir="rtl"] .table-wrapper--scroll-indicator::after {
+  background: linear-gradient(to left, transparent, var(--color-background));
+  left: 0;
+  right: auto;
+}
+
+/* Input prefix/suffix positioning */
+[dir="rtl"] .field__prefix {
+  border-inline-end: 1px solid var(--color-border);
+  border-inline-start: none;
+}
+
+[dir="rtl"] .field__suffix {
+  border-inline-start: 1px solid var(--color-border);
+  border-inline-end: none;
+}
