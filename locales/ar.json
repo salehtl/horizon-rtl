@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "accessibility": {
     "account": "الحساب",
@@ -327,6 +336,231 @@
       "in_cart": "في السلة",
       "default_title": "العنوان الافتراضي",
       "sticky_add_to_cart": "شريط الإضافة السريعة للسلة"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "optional_phone_label": "الهاتف (اختياري)",
+        "phone_placeholder": "هاتف",
+        "phone_tooltip": "في حال احتجنا إلى الاتصال بك بخصوص طلبك",
+        "zip_code_label": "الرمز البريدي",
+        "optional_zip_code_label": "الرمز البريدي (اختياري)",
+        "zip_code_placeholder": "الرمز البريدي",
+        "postal_code_label": "رمز بريدي",
+        "optional_postal_code_label": "الرمز البريدي (اختياري)",
+        "postal_code_placeholder": "رمز بريدي",
+        "postcode_label": "شفرة البريد",
+        "optional_postcode_label": "الرمز البريدي (اختياري)",
+        "postcode_placeholder": "شفرة البريد",
+        "pincode_label": "رمز التعريف الشخصي (PIN)",
+        "optional_pincode_label": "رمز التعريف الشخصي (اختياري)",
+        "pincode_placeholder": "رمز التعريف الشخصي (PIN)",
+        "civic_number_warning": "أضف رقم المنزل إن وجد",
+        "optional_last_name_label": "اسم العائلة (اختياري)",
+        "different_shipping_address_label": "الشحن إلى عنوان مختلف",
+        "different_shipping_address_text": "استخدم عنوانًا لمرة واحدة لهذا الطلب",
+        "change_company_location_link_label": "تغيير موقع الشركة",
+        "change_location_link_label": "تغيير الموقع",
+        "ship_to_company": "الشحن إلى {{companyName}}"
+      },
+      "delivery_options": {
+        "free_total_label": "حر",
+        "ship": "سفينة",
+        "ship_to_address": "عنوان الشحن",
+        "shipping_address": "عنوان الشحن",
+        "pick_up": "يلتقط",
+        "pick_up_from_store": "الاستلام من المتجر",
+        "pick_up_locations": "مواقع الاستلام",
+        "pickup_point_map_title": "خريطة نقاط الاستلام",
+        "pick_up_in_one_hour": "جاهز عادةً خلال ساعة واحدة",
+        "pick_up_in_two_hours": "جاهز عادةً خلال ساعتين",
+        "pick_up_in_four_hours": "جاهز عادةً خلال 4 ساعات",
+        "pick_up_in_twenty_four_hours": "جاهز عادةً خلال 24 ساعة",
+        "pick_up_in_two_to_four_days": "جاهز عادةً خلال 2-4 أيام",
+        "pick_up_in_five_or_more_days": "جاهز عادةً خلال 5 أيام أو أكثر",
+        "pick_up_in_zero_to_two_hours": "جاهز للاستلام خلال ساعتين",
+        "pick_up_in_two_to_four_hours": "جاهز للاستلام خلال 4 ساعات",
+        "pick_up_immediately": "جاهز للاستلام الآن",
+        "pick_up_next_day": "جاهز للاستلام في اليوم التالي",
+        "pickup_point_method_definition": "الشحن إلى نقطة الاستلام",
+        "retail_method_definition": "الشحن بالتجزئة",
+        "company_location_no_address_banner": "سيتم تقديم الطلبات التي يتم شحنها إلى مواقع بدون عنوان للمراجعة.",
+        "none_method_definition": "لا يوجد شحن",
+        "subscription_pickup_information": "سيتم تطبيق طريقة التوصيل هذه على جميع العناصر في هذا الطلب وعلى جميع الطلبات المستقبلية لهذا الاشتراك."
+      },
+      "customer_account": {
+        "not_user_label": "ليس %{first_name}؟",
+        "have_an_account_label": "هل لديك حساب؟",
+        "sign_in_link_label": "تسجيل الدخول",
+        "sign_out_link_label": "تسجيل الخروج",
+        "save_my_information_label": "احفظ هذه المعلومات لاستخدامها في المرة القادمة",
+        "invalid_address": "العنوان المُختار غير صالح. %{update_address_link} أو اختر عنوانًا مختلفًا.",
+        "incomplete_address": "العنوان المحدد غير مكتمل. %{update_address_link} أو اختر عنوانًا مختلفًا.",
+        "rollup_label": "حساب",
+        "rollup_accessibility_label": "خيارات الحساب",
+        "invalid_shipping_method_summary": "اختر عنوان شحن صالحًا لعرض طرق الشحن المتاحة",
+        "saved_address_option_description": {
+          "one": "لديك {{count}} عنوان محفوظ.",
+          "other": "لديك {{count}} عنوانًا محفوظًا."
+        },
+        "saved_address_option_link": "استخدم عنوانًا محفوظًا",
+        "saved_address_modal_title": "استخدم عنواني المحفوظ"
+      },
+      "remote_merchandise_only": {
+        "title": "أكمل عملية الشراء",
+        "remote_only_notice": "تُباع هذه المنتجات وتُشحن من متاجر أخرى. يُرجى إتمام عملية الشراء من كل متجر على حدة.",
+        "return_to_store_label": "العودة إلى المتجر",
+        "detail_item_label": {
+          "one": "{{count}} عنصرًا",
+          "other": "{{count}} عنصرًا"
+        },
+        "checkout_on_shop_label": "قم بإتمام عملية الشراء على %{shop_name}",
+        "single_shop_transition": "سيتم تحويلك إلى %{advertiser} لإتمام عملية الشراء."
+      },
+      "stock": {
+        "page_title": "مشاكل المخزون",
+        "title": "إنتهى من المخزن",
+        "items_unavailable_notice": "بعض المنتجات لم تعد متوفرة.",
+        "product_column_header": "منتجات",
+        "quantity_column_header": "كمية",
+        "price_column_header": "سعر",
+        "status_column_header": "حالة",
+        "removed_from_cart_notice": "تمت إزالته من سلة التسوق",
+        "sold_out_label": "نفذ",
+        "reduced_label": "مخفض",
+        "reduced_with_quantity_label": "الكمية المتبقية %{quantITY_available} فقط",
+        "remove_from_cart_button_label": "إزالة من سلة التسوق",
+        "continue_shopping_button_label": "يكمل",
+        "go_back_to_cart_button_label": "العودة إلى سلة التسوق",
+        "remove": "يزيل",
+        "return_to_store_label": "العودة إلى المتجر",
+        "continue_cta_label": "تابع عملية الدفع",
+        "item_label": {
+          "one": "{{count}} عنصرًا",
+          "other": "{{count}} عنصرًا"
+        },
+        "empty_cart_label": "سلة التسوق الخاصة بك فارغة",
+        "quantity_update": {
+          "page_title": "تحديث الكمية",
+          "title": "تحديث الكمية",
+          "description": "لقد تغيرت الكميات المتاحة لهذه المنتجات وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "unpurchasable_product": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه المنتجات غير متاحة لطلبات الشركات (B2B).",
+          "status_column_header": "غير متوفر"
+        },
+        "unpurchasable_product_generic": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه المنتجات غير متوفرة.",
+          "status_column_header": "غير متوفر"
+        },
+        "unfulfillable_product": {
+          "title": "خدمة التوصيل غير متوفرة",
+          "message": {
+            "one": "لم يعد خيار %{delivery_method} متاحًا لهذا المنتج.",
+            "other": "لم يعد خيار %{delivery_method} متاحًا لهذه المنتجات."
+          }
+        }
+      },
+      "shipping": {
+        "split_shipping_merchandise_quantity_label_inline_primary": "الكمية: %{quantity}",
+        "split_shipping_option_free": "ًالشحن مجانا",
+        "split_shipping_option_lowest_price": "أقل سعر",
+        "split_shipping_option_fastest": "الأسرع",
+        "split_shipping_option_recommended": "مُستَحسَن",
+        "split_shipping_option_custom": "مخصص",
+        "add_shipping_address": "أضف عنوان الشحن",
+        "choose_new_address": "اختر عنوانًا جديدًا"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "معلومات إضافية",
+          "shipping_credential_kr": "رمز التعريف الشخصي",
+          "shipping_credential_cn": "رقم هوية المقيم",
+          "tax_credential_it": "الكوديس فيسكال (اختياري)",
+          "tax_email_it": "PEC (اختياري)",
+          "tax_credential_cl": "شبق",
+          "shipping_credential_cl": "شبق",
+          "tax_credential_co": "بطاقة الهوية/رقم ضريبة القيمة المضافة",
+          "tax_credential_type_co": "نوع بطاقة الهوية",
+          "shipping_credential_co": "بطاقة الهوية/رقم ضريبة القيمة المضافة",
+          "shipping_credential_type_co": "نوع بطاقة الهوية",
+          "tax_credential_cr": "رقم التعريف/RUT",
+          "shipping_credential_cr": "رقم التعريف/RUT",
+          "tax_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "shipping_credential_my": "رقم التعريف الضريبي/رقم التسجيل",
+          "tax_credential_type_mx": "النظام المالي",
+          "tax_credential_use_mx": "استخدام CFDI",
+          "shipping_credential_tw": "رقم الهوية الوطنية / ضريبة القيمة المضافة"
+        }
+      },
+      "payment": {
+        "network_card_payment_options": "اختر شبكة بطاقات",
+        "network_card_persistence_description": "سيتم حفظ الشبكة المختارة مع طريقة الدفع الخاصة بك للمعاملات المستقبلية.",
+        "amazon_payments_label": "أمازون باي",
+        "amazon_payments_login_hint": "سيُطلب منك تسجيل الدخول باستخدام حسابك على أمازون.",
+        "amazon_payments_logout": "تسجيل الخروج من أمازون باي",
+        "amazon_payments_failed_mfa_challenge": "لم يتم استخدام طريقة الدفع المختارة. يرجى اختيار طريقة دفع أخرى أو الاتصال بالبنك أو جهة إصدار بطاقتك.",
+        "amazon_payments_abandoned_mfa_challenge": "لم يتم إتمام عملية الدفع. حاول استخدام طريقة دفع أخرى أو اتصل بالبنك أو جهة إصدار بطاقتك.",
+        "amazon_payments_could_not_enqueue_authorize": "حدثت مشكلة أثناء معالجة دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
+        "title": "قسط",
+        "amount_left_to_pay_label": "موعد الدفع:",
+        "discount_button_action_label": "استخدم رمز الخصم",
+        "discount_codes_removed_summary": {
+          "one": "تمت إزالة رمز الخصم %{count}",
+          "other": "تمت إزالة %{count} من أكواد الخصم"
+        },
+        "discount_codes_modified_summary": {
+          "one": "تم تعديل رمز الخصم %{count}",
+          "other": "تم تعديل %{count} من أكواد الخصم"
+        },
+        "discount_codes_removed_or_modified_summary": {
+          "one": "تمت إزالة أو تعديل رمز الخصم %{count}",
+          "other": "تمت إزالة أو تعديل %{count} من أكواد الخصم"
+        },
+        "discount_show_more_warnings": {
+          "one": "عرض المزيد من %{count}",
+          "other": "عرض المزيد من %{count}"
+        },
+        "gift_card_code_label": "رمز بطاقة الهدايا",
+        "apply_gift_card_button_label": "يتقدم",
+        "gift_card_balance_label": "توازن:",
+        "supported_card_brands_more_label": "والمزيد…",
+        "detected_card_brand": "تم الكشف عن نوع البطاقة: {brand}",
+        "credit_card_vaulting_sign_in_banner_title": "احتفظ ببطاقتك الائتمانية",
+        "credit_card_vaulting_sign_in_banner_info": "قم بتسجيل الدخول أو إنشاء حساب لحفظ بطاقتك الائتمانية لاستخدامها في عمليات الشراء المستقبلية.",
+        "credit_card_vaulting_sign_in_banner_button_label": "تسجيل الدخول",
+        "ftd_vault_credit_card_label": "احفظ هذه البطاقة الائتمانية في حسابي لإتمام عملية الدفع بشكل أسرع.",
+        "card_number_label": "رقم البطاقة",
+        "card_number_placeholder": "رقم البطاقة",
+        "card_pay_with": "ادفع باستخدام:",
+        "card_security_notice": "جميع المعاملات آمنة ومشفرة.",
+        "card_security_vault_notice": "نحتاج إلى بياناتك لإتمام عمليات الدفع المستقبلية. جميع المعاملات آمنة ومشفّرة.",
+        "card_information_notice": "جميع المعاملات آمنة ومشفرة. لا يتم تخزين معلومات بطاقات الائتمان مطلقاً.",
+        "name_on_card_label": "الاسم على البطاقة",
+        "name_on_card_placeholder": "الاسم على البطاقة",
+        "card_nickname_label": "اللقب (اختياري)",
+        "card_expired": "منتهي الصلاحية",
+        "card_expiry_label": "تاريخ الانتهاء (شهر / سنة)",
+        "card_expiry_placeholder": "تاريخ الانتهاء (شهر / سنة)",
+        "credit_card_start_month": "بداية الشهر",
+        "credit_card_start_year": "بداية العام",
+        "delete_customer_mandate_modal_title": "هل تريد حذف بطاقة الدفع هذه؟",
+        "delete_customer_mandate_modal_body": "إذا قمت بإزالة هذه البطاقة، فسيتعين عليك إضافتها مرة أخرى قبل استخدامها للدفع.",
+        "delete_customer_mandate_modal_confirm": "قم بإزالة البطاقة",
+        "delete_customer_mandate_modal_cancel": "يلغي",
+        "card_verification_value_label": "رمز الأمان",
+        "card_verification_value_placeholder": "رمز الأمان",
+        "card_verification_confirm": "لأغراض التحقق، أدخل رمز الأمان الخاص ببطاقتك.",
+        "card_expiry_date_explanation": "تاريخ انتهاء صلاحية البطاقة بالصيغة التالية: الشهر، الشهر، السنة، السنة",
+        "card_expiration_month_label": "شهر انتهاء الصلاحية",
+        "card_expiration_year_label": "سنة الانتهاء",
+        "card_verification_value_explanation": "رمز الأمان المكون من 3 أرقام موجود عادةً على ظهر البطاقة. أما بطاقات أمريكان إكسبريس، فيحتوي رمزها على 4 أرقام موجود على وجهها."
+      }
     }
   }
 }
