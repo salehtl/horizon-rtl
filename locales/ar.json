@@ -2994,7 +2994,95 @@
         "card_expiry_label": "تاريخ الانتهاء (شهر / سنة)",
         "card_expiry_placeholder": "تاريخ الانتهاء (شهر / سنة)",
         "card_verification_value_label": "رمز الأمان",
-        "card_verification_value_placeholder": "رمز الأمان"
+        "card_verification_value_placeholder": "رمز الأمان",
+        "card_start_label": "تاريخ الإصدار (شهر / سنة)",
+        "card_start_placeholder": "تاريخ الإصدار (شهر / سنة)",
+        "tooltip": {
+          "tooltip_accessibility_label": "للمزيد من المعلومات",
+          "card_verification_value_explanation_amex": "رمز أمان مكون من 4 أرقام موجود على وجه بطاقتك",
+          "card_verification_value_explanation_other": "رمز أمان مكون من 3 أرقام موجود على ظهر بطاقتك",
+          "card_verification_value_explanation": "رمز الأمان المكون من 3 أرقام موجود عادةً على ظهر البطاقة. أما بطاقات أمريكان إكسبريس، فيحتوي رمزها على 4 أرقام موجود على وجهها.",
+          "card_security_notice": "جميع المعاملات آمنة ومشفرة."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
+          "credit_card_number_invalid": "أدخل رقم بطاقة صالح",
+          "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صلاحية البطاقة الصحيح",
+          "credit_card_verification_value_blank": "أدخل رمز التحقق من البطاقة (CVV) أو رمز الأمان الموجود على بطاقتك"
+        },
+        "unavailable": {
+          "text": "الدفع ببطاقات الائتمان والخصم غير متاح حاليًا.",
+          "link_text": "قم بتحديث هذه الصفحة",
+          "suffix": "أو حاول مرة أخرى لاحقاً."
+        }
+      },
+      "payment_delete": {
+        "title": "حذف طريقة الدفع",
+        "description_without_replacement": "لن تكون طريقة الدفع هذه متاحة للمشتريات المستقبلية.",
+        "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على عمليات الدفع المسبقة. يمكنك استبدالها بطريقة دفع أخرى لمواصلة استلام الطلبات القادمة.",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. ما لم تختر طريقة دفع بديلة، فسيتم خصم أي أرصدة مستحقة على الطلبات الحالية من هذه الطريقة. سيُمكّنك اختيار طريقة دفع بديلة من استلام طلبات الاشتراك القادمة دون انقطاع.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة للمشتريات المستقبلية. ما لم تختر طريقة دفع بديلة، فسيتم خصم أي مبالغ مستحقة على الطلبات الحالية.",
+          "with_subscriptions": "سيؤدي حذف طريقة الدفع هذه إلى التأثير على المدفوعات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة استلام الطلبات القادمة."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. سيتم خصم أي أرصدة مستحقة على الطلبات الحالية من هذه الطريقة، ولكنك لن تتلقى طلبات الاشتراك القادمة. أضف طريقة دفع بديلة لمواصلة تلقي طلبات الاشتراك.",
+          "with_pending_orders": "سيؤدي حذف طريقة الدفع هذه إلى إزالتها من حسابك ولن تكون متاحة للمشتريات المستقبلية. مع ذلك، سيتم خصم أي مبالغ مستحقة على الطلبات الحالية منها.",
+          "with_subscriptions": "سيؤثر حذف طريقة الدفع هذه على المدفوعات المسبقة. أضف طريقة دفع بديلة لمواصلة استلام الطلبات القادمة."
+        },
+        "payment_method_selector_placeholder": "اختر طريقة دفع بديلة (اختياري)",
+        "payment_method_selector_no_alternative_payment": "لا توجد طريقة بديلة",
+        "replace_method_with_new_method_description": "سيتم حذف {{currentPaymentMethodName}} واستبداله بـ {{newPaymentMethodName}} .",
+        "error_when_deleting": "نعتذر، ولكن حدث خطأ ما ولم نتمكن من حذف طريقة الدفع هذه. يرجى المحاولة مرة أخرى لاحقًا أو تحديث الصفحة.",
+        "delete_and_replace_button": "حذف واستبدال",
+        "delete_and_replace_button_accessibility_label": "احذف {{currentPaymentMethodName}} واستبدله بـ {{newPaymentMethodName}} .",
+        "deleted_successfully": "تم حذف طريقة الدفع بنجاح.",
+        "loading_available_payment_methods_accessibility_label": "جارٍ تحميل طرق الدفع المتاحة"
+      },
+      "add_payment_method": {
+        "title": "إضافة طريقة دفع",
+        "button_title": "يضيف",
+        "payment_method_added_confirmation": "تمت إضافة طريقة الدفع",
+        "missing_customer_error": "حدث خطأ ما. يرجى المحاولة مرة أخرى أو الاتصال بالدعم.",
+        "replace_mode_warning": "سيؤثر حذف طريقة الدفع هذه على الاشتراكات أو الطلبات المسبقة. استبدلها بطريقة دفع بديلة لمواصلة تلقي الطلبات القادمة.",
+        "choose_from_list": "اختر من القائمة",
+        "add_new_button": "إضافة جديد",
+        "billing_address": {
+          "title": "عنوان الفواتير",
+          "add_billing_address_button": "إضافة جديد",
+          "add_billing_address_button_accessibility_label": "إضافة عنوان فوترة جديد",
+          "choose_billing_address_from_list_button": "اختر من القائمة",
+          "choose_billing_address_from_list_button_accessibility_label": "اختر عنوانًا للفواتير من القائمة",
+          "missing_billing_address_error_message": "يرجى تحديد عنوان الفوترة",
+          "default_checkbox": "قم بتعيينها كطريقة الدفع الافتراضية"
+        },
+        "subscription_contracts": {
+          "title": "استخدم طريقة الدفع هذه للطلبات المتكررة",
+          "more_items": {
+            "one": "{{count}} منتج إضافي",
+            "other": "{{count}} منتجًا إضافيًا"
+          },
+          "product_count": {
+            "one": "{{count}} منتج",
+            "other": "{{count}} منتجًا"
+          },
+          "product_details": "تفاصيل المنتج",
+          "load_more": "تحميل المزيد"
+        },
+        "updating_contracts": {
+          "one": "جارٍ تحديث عقد اشتراك {{count}} ...",
+          "other": "جارٍ تحديث {{count}} عقد اشتراك..."
+        },
+        "contracts_updated": {
+          "one": "تم تحديث عقد اشتراك {{count}} بنجاح",
+          "other": "تم تحديث {{count}} عقد اشتراك بنجاح"
+        },
+        "contracts_update_failed": "فشل تحديث بعض عقود الاشتراك",
+        "subscription_contracts_updated": "تم تحديث {{succeeded}} من {{total}} اشتراكات",
+        "invalid_wallet_type_error": "نوع المحفظة غير صالح."
+      },
+      "three_d_secure": {
+        "verification_failed": "لم يتم التحقق من عملية الدفع. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
       }
     },
     "order_details": {
@@ -3223,6 +3311,49 @@
         "staff_and_permissions_title": "الموظفون والتصاريح",
         "tax_details_title": "تفاصيل الضرائب"
       }
+    },
+    "payment_method_brands": {
+      "visa": "فيزا",
+      "mastercard": "ماستر كارد",
+      "americanexpress": "أمريكان إكسبريس",
+      "discover": "يكتشف",
+      "dinersclub": "داينرز كلوب",
+      "elo": "إيلو",
+      "visaelectron": "فيزا إلكترون",
+      "maestro": "مايسترو",
+      "dankort": "دانكورت",
+      "hipercard": "بطاقة هيبركارد",
+      "unionpay": "يونيون باي",
+      "laser": "الليزر",
+      "shoppay": "تسوق وادفع",
+      "applepay": "أبل باي",
+      "googlepay": "جوجل باي",
+      "paypal": "باي بال",
+      "storecredit": "رصيد المتجر",
+      "bogus": "مزيف"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "تفضيلات ملفات تعريف الارتباط"
+    },
+    "ui_components": {
+      "clear": "واضح",
+      "clipboardCopied": "تم النسخ",
+      "clipboardFailedToCopy": "فشل النسخ",
+      "closeNotification": "يغلق",
+      "expandNotification": "عرض المزيد",
+      "closeModal": "يغلق",
+      "submit": "يُقدِّم",
+      "processing": "يعالج…",
+      "increase": "زيادة {{type}}",
+      "decrease": "انخفاض {{type}}",
+      "minimumReached": "تم الوصول إلى الحد الأدنى لـ {{value}}",
+      "maximumReached": "تم الوصول إلى الحد الأقصى لـ {{value}}",
+      "january": "يناير",
+      "february": "فبراير",
+      "march": "يمشي",
+      "april": "أبريل",
+      "may": "يمكن",
+      "june": "يونيو"
     }
   }
 }
