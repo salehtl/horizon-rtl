@@ -3678,7 +3678,145 @@
         "section_title": "موقع",
         "shipping_address_required": "أضف عنوان الشحن إلى هذا الموقع لبدء تقديم الطلبات.",
         "staff_and_permissions_title": "الموظفون والتصاريح",
-        "tax_details_title": "تفاصيل الضرائب"
+        "tax_details_title": "تفاصيل الضرائب",
+        "tax_id": "رقم التعريف الضريبي",
+        "tax_exemptions": "الإعفاءات الضريبية",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} المزيد",
+        "multiple_tax_exemptions_and": "و",
+        "tax_exemptions_modal_close": "يغلق",
+        "taxes_none": "لا أحد",
+        "tax_exemption_not_applicable": "غير متوفر",
+        "tax_exemptions_modal_button_accessibility_label": "اطلع على جميع الإعفاءات الضريبية"
+      },
+      "location_selection": {
+        "continue_to_store": "استمر في التخزين",
+        "description": "إذا كانت لديك بالفعل عناصر في سلة التسوق الخاصة بك، فقد يؤثر تغيير المواقع على أسعار وكميات سلة التسوق.",
+        "description_switch_later": "يمكنك التبديل لاحقًا",
+        "list_accessibility_label": "قائمة المواقع",
+        "list_item_without_address_accessibility_label": "{{name}} : لا يوجد عنوان",
+        "list_loading_accessibility_message": "جارٍ تحميل قائمة المواقع",
+        "list_loading_address_accessibility_message": "عنوان التحميل لـ {{locationName}}",
+        "list_loading_finished_accessibility_message": "تم تحميل قائمة المواقع",
+        "loading_store_accessibility_message": "ذاهب إلى المتجر",
+        "no_location_title": "الطلبات الشخصية فقط",
+        "no_location_description": "لم يعد لديك إذن لتقديم طلبات لشركة {{company}} . لا يزال بإمكانك تقديم طلبات شخصية.",
+        "no_locations_found": "لم يتم العثور على مواقع",
+        "search": "ابحث عن المواقع",
+        "search_location_title": "حدد موقعًا",
+        "selection_cancel_button": "يلغي",
+        "selection_confirmation_button": "اختر الموقع",
+        "selection_continue_button": "يكمل",
+        "title": "لأي موقع تشتري؟",
+        "title_choose_location": "اختر موقعًا",
+        "clear_search": "مسح البحث",
+        "try_new_search": "جرب بحثًا جديدًا"
+      },
+      "addresses": {
+        "add_billing_address_button": "أضف عنوان الفوترة",
+        "add_billing_address_section_accessibility_label": "أضف عنوان الفوترة",
+        "add_shipping_address_button": "أضف عنوان الشحن",
+        "add_shipping_address_section_accessibility_label": "أضف عنوان الشحن",
+        "billing_address_card_title": "عنوان الفواتير",
+        "cancel_adding_billing_address_accessibility_label": "إلغاء إضافة عنوان الفوترة",
+        "cancel_adding_shipping_address_accessibility_label": "إلغاء إضافة عنوان الشحن",
+        "save_new_billing_address_accessibility_label": "حفظ عنوان الفواتير",
+        "save_new_shipping_address_accessibility_label": "حفظ عنوان الشحن",
+        "shipping_address_card_title": "عنوان الشحن"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "إخفاء الكل",
+          "show_all": "عرض الكل",
+          "hide_all_accessibility_label": "إخفاء جميع الطلبات قيد المراجعة",
+          "show_all_accessibility_label": "عرض جميع الطلبات قيد المراجعة",
+          "show_all_orders_in_review": "عرض جميع الطلبات قيد المراجعة",
+          "show_less_orders_in_review": "عرض عدد أقل من الطلبات قيد المراجعة",
+          "title": "قيد الانتظار",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "ليس لديك أي طلبات معلقة",
+            "pending_orders": {
+              "one": "لديك {{count}} طلب معلق",
+              "other": "لديك {{count}} طلب معلق"
+            },
+            "more_than_pagination_length": "لديك أكثر من {{count}} طلب معلق"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "أزرار التنقل الخاصة بالطلبات قيد المراجعة"
+          }
+        },
+        "order_list_column_headers_location": "موقع",
+        "order_list_column_headers_contact": "اتصال",
+        "order_list_column_headers_status": "حالة",
+        "removed_company_contact_tooltip": "تم فصله من الشركة"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "تم تأكيد الطلب رقم {{date}} من الطلب رقم {{draftOrderName}}",
+        "loading": "تفاصيل طلب التحميل",
+        "loading_finished_accessibility_message": "تم تحميل تفاصيل الطلب",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "دفعتك متأخرة {{count}} يومًا",
+              "other": "دفعتك متأخرة {{count}} يومًا"
+            },
+            "banner_due": {
+              "one": "موعد استحقاق دفعتك هو {{count}} يومًا",
+              "other": "موعد استحقاق دفعتك هو {{count}} يومًا"
+            },
+            "banner_due_today": "موعد استحقاق دفعتك اليوم",
+            "banner_due_today_for_multiple_fulfillments": "الدفع مستحق اليوم مقابل {{count}} عملية تنفيذ",
+            "banner_overdue_for_multiple_fulfillments": "المبلغ المستحق مقابل {{count}} عملية تنفيذ",
+            "title": "الدفعة المستحقة",
+            "title_with_date": "تاريخ استحقاق الدفع {{date}}",
+            "title_due_on_receipt": "لم يحن موعد الدفع بعد",
+            "title_due_on_fulfillment": "يُستحق الدفع عند إتمام عملية الشراء.",
+            "description_overdue": "دفعتك متأخرة.",
+            "description_partially_paid": "تم سداد جزء من هذا الطلب. يتبقى عليك دفع المبلغ المتبقي.",
+            "description_authorized": "سيتم خصم المبلغ من طريقة الدفع الخاصة بك في تاريخ الاستحقاق، أو يمكنك الدفع الآن.",
+            "description_waiting_for_manual_payment": "هذا الطلب لا يزال قيد الدفع. سيتم تحديث الرصيد عند استلام الدفعة.",
+            "description_due_on_receipt": "ستتلقى فاتورة عند حلول موعد الدفع.",
+            "description_due_on_receipt_partially_paid": "تم سداد جزء من هذا الطلب. يتبقى عليك مبلغ مستحق. ستتلقى فاتورة عند حلول موعد السداد.",
+            "description_due_on_fulfillment": "يُستحق الدفع بمجرد إتمام جميع بنود هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid": "تم سداد جزء من هذا الطلب. يتبقى عليك دفع المبلغ المتبقي. يجب سداد المبلغ بالكامل عند إتمام جميع بنود هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid_next": "تم سداد جزء من هذا الطلب. يتبقى عليك دفع المبلغ المتبقي."
+          },
+          "draft": {
+            "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+            "title": "لم يحن موعد الدفع بعد",
+            "in_review": {
+              "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+              "title": "لم يحن موعد الدفع بعد"
+            },
+            "submitted": {
+              "description": "قم بدفع المبلغ لتأكيد هذا الطلب.",
+              "title": "ادفع للتأكيد",
+              "deposit": {
+                "title": "الدفع مستحق",
+                "due_later": "يتم سداد الرصيد وفقًا لشروط {{translatedName}} ويستحق في {{dueDate}} .",
+                "due_on_fulfillment": "يُستحق دفع المبلغ المتبقي بمجرد استكمال جميع بنود هذا الطلب.",
+                "due_on_receipt": "ستتلقى فاتورة بالمبلغ المتبقي.",
+                "due_on_date": "يستحق سداد الرصيد المتبقي في {{dueDate}} ."
+              }
+            },
+            "deposit": {
+              "due_later": "سيُستحق مبلغ {{depositAmount}} عند تأكيد طلبك. أما المبلغ المتبقي فسيكون وفقًا لشروط {{translatedName}} .",
+              "due_on_fulfillment": "سيتم دفع مبلغ {{depositAmount}} عند تأكيد طلبك. أما المبلغ المتبقي فسيتم دفعه عند إتمام الطلب.",
+              "due_on_receipt": "سيتم دفع مبلغ {{depositAmount}} عند تأكيد طلبك. أما المبلغ المتبقي فسيتم دفعه لاحقاً.",
+              "due_on_date": "سيُستحق مبلغ {{depositAmount}} عند تأكيد طلبك. أما المبلغ المتبقي فسيستحق في {{dueDate}} ."
+            }
+          },
+          "paid": {
+            "title": "مدفوع",
+            "title_with_date": "تم الدفع في {{date}}",
+            "description": "تم دفع قيمة طلبك بالكامل."
+          },
+          "refund": {
+            "title": "تم استرداد المبلغ",
+            "title_with_date": "تم رد المبلغ في {{date}}",
+            "description_full_refund": "لقد تلقيت استرداداً كاملاً لهذا الطلب."
+          }
+        }
       }
     },
     "payment_method_brands": {
