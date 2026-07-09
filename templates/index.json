@@ -220,7 +220,7 @@
           "static": true,
           "settings": {
             "placement": "on_image",
-            "horizontal_alignment": "flex-start",
+            "horizontal_alignment": "center",
             "vertical_alignment": "flex-start",
             "collection_card_gap": 8,
             "inherit_color_scheme": true,
@@ -284,7 +284,9 @@
       ],
       "name": "t:names.collections_grid",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "awnings"
+        ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "columns": 3,
