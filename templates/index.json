@@ -806,6 +806,7 @@
       "block_order": [
         "group_i8kCQW"
       ],
+      "disabled": true,
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [],
