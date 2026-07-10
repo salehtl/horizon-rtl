@@ -82,10 +82,10 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>We create with intention. Our products solve real problems with clean design and honest materials.</p>",
+                "text": "<h5>More than just protection</h5><p>Whether it’s to escape the heat or create a dry refuge, an awning can quickly become one of your most valued accessories.</p><ul><li>Blackout coating providing stronger UV protection.</li><li>Less heat penetration under the awning keeps the heat out.</li></ul><p></p>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
