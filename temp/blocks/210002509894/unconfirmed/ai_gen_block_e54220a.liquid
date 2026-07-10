@@ -1,6 +1,698 @@
+{% doc %}
+  @prompt
+    i want a description box and package box and specification box, i don't want it like this i want something like Description Specifications Package List and under each category i want to add the information's and i want them to be one line side by side   
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-product-info-tabs-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-product-info-tabs__nav-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.tab_gap }}px;
+    border-bottom: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    margin-bottom: {{ block.settings.content_spacing }}px;
+  }
+
+  .ai-product-info-tabs__tab-{{ ai_gen_id }} {
+    flex: 1;
+    padding: {{ block.settings.tab_padding }}px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    font-size: {{ block.settings.tab_font_size }}px;
+    font-weight: 600;
+    color: {{ block.settings.tab_color }};
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .ai-product-info-tabs__tab-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.tab_hover_color }};
+    background-color: {{ block.settings.tab_hover_background }};
+  }
+
+  .ai-product-info-tabs__tab-{{ ai_gen_id }}.active {
+    color: {{ block.settings.tab_active_color }};
+    border-bottom-color: {{ block.settings.tab_active_border }};
+  }
+
+  .ai-product-info-tabs__content-{{ ai_gen_id }} {
+    padding: {{ block.settings.content_padding }}px;
+    background-color: {{ block.settings.content_background }};
+    border-radius: {{ block.settings.border_radius }}px;
+    {% if block.settings.show_content_border %}
+      border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    {% endif %}
+  }
+
+  .ai-product-info-tabs__panel-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  .ai-product-info-tabs__panel-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .ai-product-info-tabs__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-product-info-tabs__description-{{ ai_gen_id }} p {
+    margin: 0 0 16px 0;
+  }
+
+  .ai-product-info-tabs__description-{{ ai_gen_id }} p:last-child {
+    margin-bottom: 0;
+  }
+
+  .ai-product-info-tabs__spec-table-{{ ai_gen_id }} {
+    width: 100%;
+  }
+
+  .ai-product-info-tabs__spec-row-{{ ai_gen_id }} {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid {{ block.settings.divider_color }};
+  }
+
+  .ai-product-info-tabs__spec-row-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-product-info-tabs__spec-label-{{ ai_gen_id }} {
+    flex: 0 0 40%;
+    padding: {{ block.settings.row_padding }}px;
+    color: {{ block.settings.label_color }};
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: 600;
+    background-color: {{ block.settings.label_background }};
+  }
+
+  .ai-product-info-tabs__spec-value-{{ ai_gen_id }} {
+    flex: 1;
+    padding: {{ block.settings.row_padding }}px;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+  }
+
+  .ai-product-info-tabs__package-list-{{ ai_gen_id }} {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .ai-product-info-tabs__package-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: {{ block.settings.row_padding }}px 0;
+    border-bottom: 1px solid {{ block.settings.divider_color }};
+  }
+
+  .ai-product-info-tabs__package-item-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-product-info-tabs__package-icon-{{ ai_gen_id }} {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ block.settings.icon_background }};
+    border-radius: 50%;
+    color: {{ block.settings.icon_color }};
+  }
+
+  .ai-product-info-tabs__package-icon-{{ ai_gen_id }} svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .ai-product-info-tabs__package-text-{{ ai_gen_id }} {
+    flex: 1;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-product-info-tabs-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-product-info-tabs__nav-{{ ai_gen_id }} {
+      gap: {{ block.settings.tab_gap | times: 0.5 }}px;
+    }
+
+    .ai-product-info-tabs__tab-{{ ai_gen_id }} {
+      padding: {{ block.settings.tab_padding | times: 0.75 }}px;
+      font-size: {{ block.settings.tab_font_size | times: 0.85 }}px;
+    }
+
+    .ai-product-info-tabs__content-{{ ai_gen_id }} {
+      padding: {{ block.settings.content_padding | times: 0.75 }}px;
+    }
+
+    .ai-product-info-tabs__spec-row-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-product-info-tabs__spec-label-{{ ai_gen_id }} {
+      border-bottom: 1px solid {{ block.settings.divider_color }};
+    }
+  }
+{% endstyle %}
+
+<product-info-tabs-{{ ai_gen_id }} class="ai-product-info-tabs-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-product-info-tabs__nav-{{ ai_gen_id }}">
+    <button 
+      class="ai-product-info-tabs__tab-{{ ai_gen_id }} active" 
+      data-tab="description"
+      aria-label="Description tab"
+    >
+      {{ block.settings.tab_1_title }}
+    </button>
+    <button 
+      class="ai-product-info-tabs__tab-{{ ai_gen_id }}" 
+      data-tab="specifications"
+      aria-label="Specifications tab"
+    >
+      {{ block.settings.tab_2_title }}
+    </button>
+    <button 
+      class="ai-product-info-tabs__tab-{{ ai_gen_id }}" 
+      data-tab="package"
+      aria-label="Package list tab"
+    >
+      {{ block.settings.tab_3_title }}
+    </button>
+  </div>
+
+  <div class="ai-product-info-tabs__content-{{ ai_gen_id }}">
+    <div class="ai-product-info-tabs__panel-{{ ai_gen_id }} active" data-panel="description">
+      <div class="ai-product-info-tabs__description-{{ ai_gen_id }}">
+        {{ block.settings.description }}
+      </div>
+    </div>
+
+    <div class="ai-product-info-tabs__panel-{{ ai_gen_id }}" data-panel="specifications">
+      <div class="ai-product-info-tabs__spec-table-{{ ai_gen_id }}">
+        {% if block.settings.spec_1_label != blank and block.settings.spec_1_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_1_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_1_value }}</div>
+          </div>
+        {% endif %}
+        
+        {% if block.settings.spec_2_label != blank and block.settings.spec_2_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_2_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_2_value }}</div>
+          </div>
+        {% endif %}
+        
+        {% if block.settings.spec_3_label != blank and block.settings.spec_3_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_3_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_3_value }}</div>
+          </div>
+        {% endif %}
+        
+        {% if block.settings.spec_4_label != blank and block.settings.spec_4_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_4_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_4_value }}</div>
+          </div>
+        {% endif %}
+        
+        {% if block.settings.spec_5_label != blank and block.settings.spec_5_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_5_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_5_value }}</div>
+          </div>
+        {% endif %}
+        
+        {% if block.settings.spec_6_label != blank and block.settings.spec_6_value != blank %}
+          <div class="ai-product-info-tabs__spec-row-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__spec-label-{{ ai_gen_id }}">{{ block.settings.spec_6_label }}</div>
+            <div class="ai-product-info-tabs__spec-value-{{ ai_gen_id }}">{{ block.settings.spec_6_value }}</div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="ai-product-info-tabs__panel-{{ ai_gen_id }}" data-panel="package">
+      <ul class="ai-product-info-tabs__package-list-{{ ai_gen_id }}">
+        {% if block.settings.package_1 != blank %}
+          <li class="ai-product-info-tabs__package-item-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__package-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-product-info-tabs__package-text-{{ ai_gen_id }}">{{ block.settings.package_1 }}</div>
+          </li>
+        {% endif %}
+        
+        {% if block.settings.package_2 != blank %}
+          <li class="ai-product-info-tabs__package-item-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__package-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-product-info-tabs__package-text-{{ ai_gen_id }}">{{ block.settings.package_2 }}</div>
+          </li>
+        {% endif %}
+        
+        {% if block.settings.package_3 != blank %}
+          <li class="ai-product-info-tabs__package-item-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__package-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-product-info-tabs__package-text-{{ ai_gen_id }}">{{ block.settings.package_3 }}</div>
+          </li>
+        {% endif %}
+        
+        {% if block.settings.package_4 != blank %}
+          <li class="ai-product-info-tabs__package-item-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__package-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-product-info-tabs__package-text-{{ ai_gen_id }}">{{ block.settings.package_4 }}</div>
+          </li>
+        {% endif %}
+        
+        {% if block.settings.package_5 != blank %}
+          <li class="ai-product-info-tabs__package-item-{{ ai_gen_id }}">
+            <div class="ai-product-info-tabs__package-icon-{{ ai_gen_id }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div class="ai-product-info-tabs__package-text-{{ ai_gen_id }}">{{ block.settings.package_5 }}</div>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</product-info-tabs-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductInfoTabs{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.tabs = this.querySelectorAll('.ai-product-info-tabs__tab-{{ ai_gen_id }}');
+        this.panels = this.querySelectorAll('.ai-product-info-tabs__panel-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.tabs.forEach((tab) => {
+          tab.addEventListener('click', () => {
+            const targetTab = tab.getAttribute('data-tab');
+            
+            this.tabs.forEach((t) => t.classList.remove('active'));
+            this.panels.forEach((p) => p.classList.remove('active'));
+            
+            tab.classList.add('active');
+            const targetPanel = this.querySelector(`[data-panel="${targetTab}"]`);
+            if (targetPanel) {
+              targetPanel.classList.add('active');
+            }
+          });
+        });
+      }
+    }
+
+    customElements.define('product-info-tabs-{{ ai_gen_id }}', ProductInfoTabs{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product info tabs",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Tab titles"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_title",
+      "label": "Tab 1 title",
+      "default": "Description"
+    },
+    {
+      "type": "text",
+      "id": "tab_2_title",
+      "label": "Tab 2 title",
+      "default": "Specifications"
+    },
+    {
+      "type": "text",
+      "id": "tab_3_title",
+      "label": "Tab 3 title",
+      "default": "Package List"
+    },
+    {
+      "type": "header",
+      "content": "Description content"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Add your product description here. Include key features, benefits, and specifications to help customers make informed decisions.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Specifications"
+    },
+    {
+      "type": "text",
+      "id": "spec_1_label",
+      "label": "Spec 1 label",
+      "default": "Dimensions"
+    },
+    {
+      "type": "text",
+      "id": "spec_1_value",
+      "label": "Spec 1 value",
+      "default": "100 x 50 x 30 cm"
+    },
+    {
+      "type": "text",
+      "id": "spec_2_label",
+      "label": "Spec 2 label",
+      "default": "Weight"
+    },
+    {
+      "type": "text",
+      "id": "spec_2_value",
+      "label": "Spec 2 value",
+      "default": "5 kg"
+    },
+    {
+      "type": "text",
+      "id": "spec_3_label",
+      "label": "Spec 3 label",
+      "default": "Material"
+    },
+    {
+      "type": "text",
+      "id": "spec_3_value",
+      "label": "Spec 3 value",
+      "default": "Aluminum alloy"
+    },
+    {
+      "type": "text",
+      "id": "spec_4_label",
+      "label": "Spec 4 label"
+    },
+    {
+      "type": "text",
+      "id": "spec_4_value",
+      "label": "Spec 4 value"
+    },
+    {
+      "type": "text",
+      "id": "spec_5_label",
+      "label": "Spec 5 label"
+    },
+    {
+      "type": "text",
+      "id": "spec_5_value",
+      "label": "Spec 5 value"
+    },
+    {
+      "type": "text",
+      "id": "spec_6_label",
+      "label": "Spec 6 label"
+    },
+    {
+      "type": "text",
+      "id": "spec_6_value",
+      "label": "Spec 6 value"
+    },
+    {
+      "type": "header",
+      "content": "Package list"
+    },
+    {
+      "type": "text",
+      "id": "package_1",
+      "label": "Package item 1",
+      "default": "Main product unit"
+    },
+    {
+      "type": "text",
+      "id": "package_2",
+      "label": "Package item 2",
+      "default": "User manual"
+    },
+    {
+      "type": "text",
+      "id": "package_3",
+      "label": "Package item 3",
+      "default": "Warranty card"
+    },
+    {
+      "type": "text",
+      "id": "package_4",
+      "label": "Package item 4"
+    },
+    {
+      "type": "text",
+      "id": "package_5",
+      "label": "Package item 5"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "tab_padding",
+      "label": "Tab padding",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "tab_gap",
+      "label": "Tab gap",
+      "min": 0,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "Content padding",
+      "min": 0,
+      "max": 60,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "label": "Content spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "row_padding",
+      "label": "Row padding",
+      "min": 8,
+      "max": 32,
+      "step": 4,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Tab colors"
+    },
+    {
+      "type": "color",
+      "id": "tab_color",
+      "label": "Tab text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_color",
+      "label": "Tab hover text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_hover_background",
+      "label": "Tab hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_color",
+      "label": "Active tab text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "tab_active_border",
+      "label": "Active tab border",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Content colors"
+    },
+    {
+      "type": "color",
+      "id": "content_background",
+      "label": "Content background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "label_background",
+      "label": "Label background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "color",
+      "id": "icon_background",
+      "label": "Icon background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Border"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_content_border",
+      "label": "Show content border",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "Border width",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "tab_font_size",
+      "label": "Tab font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product info tabs"
+    }
+  ]
+}
 {% endschema %}
