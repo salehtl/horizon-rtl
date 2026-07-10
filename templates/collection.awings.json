@@ -56,10 +56,10 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Intentional design</h2>",
+                "text": "<h1>Free Standing Off-Road Awnings</h1>",
                 "width": "100%",
                 "max_width": "normal",
-                "alignment": "center",
+                "alignment": "left",
                 "type_preset": "h4",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
