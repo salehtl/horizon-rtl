@@ -832,20 +832,6 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
-    },
-    "divider_HF9iVM": {
-      "type": "divider",
-      "name": "t:names.divider_section",
-      "settings": {
-        "color_scheme": "",
-        "section_width": "full-width",
-        "thickness": 1,
-        "corner_radius": "square",
-        "width_percent": 100,
-        "alignment_horizontal": "center",
-        "padding-block-start": 16,
-        "padding-block-end": 16
-      }
     }
   },
   "order": [
@@ -853,7 +839,6 @@
     "collection_list_Jb6Cd7",
     "collection_list_FijxYL",
     "collection_list_CNGAbV",
-    "divider_HF9iVM",
     "product_list_fa6P9H"
   ]
 }
