@@ -156,6 +156,7 @@
         "group_PihqPH",
         "group_grrHkF"
       ],
+      "disabled": true,
       "name": "t:names.multicolumn",
       "settings": {
         "content_direction": "row",
