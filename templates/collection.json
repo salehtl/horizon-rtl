@@ -82,7 +82,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<h4>More than just protection</h4><p>Whether it’s to escape the heat or create a dry refuge, an awning can quickly become one of your most valued accessories.</p><ul><li>Blackout coating providing stronger UV protection.</li><li>Less heat penetration under the awning keeps the heat out.</li></ul>",
+                "text": "<h5>More than just protection</h5><p>Whether it’s to escape the heat or create a dry refuge, an awning can quickly become one of your most valued accessories.</p><ul><li>Blackout coating providing stronger UV protection.</li><li>Less heat penetration under the awning keeps the heat out.</li></ul>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
