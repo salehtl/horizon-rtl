@@ -68,19 +68,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "payment_icons_dRt4VH": {
-              "type": "payment-icons",
-              "name": "t:names.payment_icons",
-              "settings": {
-                "horizontal_alignment": "flex-start",
-                "gap": 10,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "group_icgrde": {
               "type": "group",
               "name": "Header",
@@ -235,6 +222,19 @@
               },
               "block_order": []
             },
+            "payment_icons_dRt4VH": {
+              "type": "payment-icons",
+              "name": "t:names.payment_icons",
+              "settings": {
+                "horizontal_alignment": "flex-start",
+                "gap": 10,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "Product description",
@@ -263,11 +263,11 @@
             }
           },
           "block_order": [
-            "payment_icons_dRt4VH",
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
+            "payment_icons_dRt4VH",
             "text_aEtTtq"
           ]
         }
