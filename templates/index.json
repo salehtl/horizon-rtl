@@ -449,8 +449,10 @@
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
-          "awnings",
           "camping-tents",
+          "rooftop-tents",
+          "battery-solar-12v",
+          "awnings",
           "recovery-equipment"
         ],
         "layout_type": "grid",
