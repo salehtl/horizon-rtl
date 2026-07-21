@@ -189,6 +189,32 @@
     "section": {
       "type": "section",
       "blocks": {
+        "text_mdCfki": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<h4>Hardshell Roof Top Tents</h4><h6>Rooftop Tents: By giving outdoor enthusiasts a practical and comfortable sleeping option, rooftop tents have revolutionized the world of camping. With their rising popularity, they have significantly influenced camper trailer design and layout. In this article, we will explore how rooftop tents have seamlessly integrated with camper trailers, optimizing space and functionality for a more enjoyable camping experience.</h6><p>Rooftop tents are tents that are mounted on the vehicle’s roof, typically a camper trailer or an SUV. These tents unfold and provide a spacious sleeping area, elevated from the ground to protect campers from uneven terrain, critters, and dampness. Due to their popularity, camper trailer manufacturers have started incorporating rooftop tents into their designs to enhance their overall functionality and appeal.</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "text_tqQTNE": {
           "type": "text",
           "name": "Title",
@@ -243,6 +269,7 @@
         }
       },
       "block_order": [
+        "text_mdCfki",
         "text_tqQTNE",
         "text_twGGkJ"
       ],
