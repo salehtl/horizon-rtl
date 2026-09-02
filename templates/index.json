@@ -304,47 +304,6 @@
         "padding-block-end": 48
       }
     },
-    "marquee_zCEyGP": {
-      "type": "marquee",
-      "blocks": {
-        "text_gcL9Fh": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Official San Hima UAE Distributor. Free UAE SHIPPING. Warranty Support.</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "tight",
-            "letter_spacing": "tight",
-            "case": "none",
-            "wrap": "nowrap",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_gcL9Fh"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "color_scheme": "",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
-      }
-    },
     "collection_list_FijxYL": {
       "type": "collection-list",
       "blocks": {
@@ -1171,7 +1130,6 @@
   "order": [
     "hero_jVaWmY",
     "collection_list_Jb6Cd7",
-    "marquee_zCEyGP",
     "collection_list_FijxYL",
     "collection_list_CNGAbV",
     "product_list_fa6P9H",
