@@ -841,7 +841,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h3>Frequently asked questions</h3>",
+            "text": "<h4><strong>San Hima UAE — Frequently Asked Questions</strong></h4>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
