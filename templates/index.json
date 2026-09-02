@@ -350,6 +350,7 @@
             "text_nbqDR8": {
               "type": "text",
               "name": "t:names.text",
+              "disabled": true,
               "settings": {
                 "text": "<h3>Winter Rooftop Package</h3>",
                 "width": "fit-content",
@@ -381,6 +382,7 @@
         "static-collection-card": {
           "type": "_collection-card",
           "name": "t:names.collection_card",
+          "disabled": true,
           "static": true,
           "settings": {
             "placement": "on_image",
