@@ -309,6 +309,7 @@
           "blocks": {
             "accordion_row_CDJJ6U": {
               "type": "_accordion-row",
+              "disabled": true,
               "settings": {
                 "heading": "Return policy",
                 "open_by_default": true,
@@ -348,6 +349,7 @@
             },
             "accordion_row_RXMjR8": {
               "type": "_accordion-row",
+              "disabled": true,
               "settings": {
                 "heading": "Shipping",
                 "open_by_default": false,
