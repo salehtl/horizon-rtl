@@ -425,6 +425,17 @@
         "padding-block-end": 0
       }
     },
+    "custom_liquid_mQzBRH": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"sanhima-tabs\">\n\n  <div class=\"sanhima-tab-buttons\">\n    <button type=\"button\" class=\"sanhima-tab active\" data-tab=\"description\">\n      Description\n    </button>\n\n    <button type=\"button\" class=\"sanhima-tab\" data-tab=\"specifications\">\n      Specifications\n    </button>\n\n    <button type=\"button\" class=\"sanhima-tab\" data-tab=\"package\">\n      Package List\n    </button>\n  </div>\n\n  <div class=\"sanhima-tab-content active\" id=\"description\">\n    {{ product.metafields.custom.description | metafield_tag }}\n  </div>\n\n  <div class=\"sanhima-tab-content\" id=\"specifications\">\n    {{ product.metafields.custom.specifications | metafield_tag }}\n  </div>\n\n  <div class=\"sanhima-tab-content\" id=\"package\">\n    {{ product.metafields.custom.package_list | metafield_tag }}\n  </div>\n\n</div>\n\n<style>\n.sanhima-tabs {\n  width: 100%;\n  margin: 40px auto;\n}\n\n.sanhima-tab-buttons {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  border-bottom: 2px solid #e5e5e5;\n  margin-bottom: 30px;\n}\n\n.sanhima-tab {\n  background: none;\n  border: none;\n  padding: 18px 10px;\n  font-size: 18px;\n  font-weight: 600;\n  cursor: pointer;\n  position: relative;\n}\n\n.sanhima-tab.active::after {\n  content: \"\";\n  position: absolute;\n  bottom: -2px;\n  left: 0;\n  width: 100%;\n  height: 3px;\n  background: #000;\n}\n\n.sanhima-tab-content {\n  display: none;\n  line-height: 1.7;\n}\n\n.sanhima-tab-content.active {\n  display: block;\n}\n\n@media screen and (max-width: 749px) {\n  .sanhima-tab {\n    font-size: 14px;\n    padding: 14px 5px;\n  }\n\n  .sanhima-tabs {\n    margin: 25px auto;\n  }\n}\n</style>\n\n<script>\ndocument.querySelectorAll('.sanhima-tab').forEach(function(button) {\n  button.addEventListener('click', function() {\n\n    const container = button.closest('.sanhima-tabs');\n\n    container.querySelectorAll('.sanhima-tab').forEach(function(tab) {\n      tab.classList.remove('active');\n    });\n\n    container.querySelectorAll('.sanhima-tab-content').forEach(function(content) {\n      content.classList.remove('active');\n    });\n\n    button.classList.add('active');\n\n    container\n      .querySelector('#' + button.dataset.tab)\n      .classList.add('active');\n  });\n});\n</script>",
+        "color_scheme": "",
+        "section_width": "page-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "product_recommendations_qggXJq": {
       "type": "product-recommendations",
       "blocks": {
@@ -565,23 +576,12 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
-    },
-    "custom_liquid_mQzBRH": {
-      "type": "custom-liquid",
-      "name": "t:names.custom_liquid",
-      "settings": {
-        "custom_liquid": "<div class=\"sanhima-tabs\">\n\n  <div class=\"sanhima-tab-buttons\">\n    <button type=\"button\" class=\"sanhima-tab active\" data-tab=\"description\">\n      Description\n    </button>\n\n    <button type=\"button\" class=\"sanhima-tab\" data-tab=\"specifications\">\n      Specifications\n    </button>\n\n    <button type=\"button\" class=\"sanhima-tab\" data-tab=\"package\">\n      Package List\n    </button>\n  </div>\n\n  <div class=\"sanhima-tab-content active\" id=\"description\">\n    {{ product.metafields.custom.description | metafield_tag }}\n  </div>\n\n  <div class=\"sanhima-tab-content\" id=\"specifications\">\n    {{ product.metafields.custom.specifications | metafield_tag }}\n  </div>\n\n  <div class=\"sanhima-tab-content\" id=\"package\">\n    {{ product.metafields.custom.package_list | metafield_tag }}\n  </div>\n\n</div>\n\n<style>\n.sanhima-tabs {\n  width: 100%;\n  margin: 40px auto;\n}\n\n.sanhima-tab-buttons {\n  display: grid;\n  grid-template-columns: repeat(3, 1fr);\n  border-bottom: 2px solid #e5e5e5;\n  margin-bottom: 30px;\n}\n\n.sanhima-tab {\n  background: none;\n  border: none;\n  padding: 18px 10px;\n  font-size: 18px;\n  font-weight: 600;\n  cursor: pointer;\n  position: relative;\n}\n\n.sanhima-tab.active::after {\n  content: \"\";\n  position: absolute;\n  bottom: -2px;\n  left: 0;\n  width: 100%;\n  height: 3px;\n  background: #000;\n}\n\n.sanhima-tab-content {\n  display: none;\n  line-height: 1.7;\n}\n\n.sanhima-tab-content.active {\n  display: block;\n}\n\n@media screen and (max-width: 749px) {\n  .sanhima-tab {\n    font-size: 14px;\n    padding: 14px 5px;\n  }\n\n  .sanhima-tabs {\n    margin: 25px auto;\n  }\n}\n</style>\n\n<script>\ndocument.querySelectorAll('.sanhima-tab').forEach(function(button) {\n  button.addEventListener('click', function() {\n\n    const container = button.closest('.sanhima-tabs');\n\n    container.querySelectorAll('.sanhima-tab').forEach(function(tab) {\n      tab.classList.remove('active');\n    });\n\n    container.querySelectorAll('.sanhima-tab-content').forEach(function(content) {\n      content.classList.remove('active');\n    });\n\n    button.classList.add('active');\n\n    container\n      .querySelector('#' + button.dataset.tab)\n      .classList.add('active');\n  });\n});\n</script>",
-        "color_scheme": "",
-        "section_width": "page-width",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
     "main",
     "178365917034944755",
-    "product_recommendations_qggXJq",
-    "custom_liquid_mQzBRH"
+    "custom_liquid_mQzBRH",
+    "product_recommendations_qggXJq"
   ]
 }
