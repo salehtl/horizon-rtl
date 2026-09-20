@@ -236,6 +236,32 @@
               },
               "blocks": {}
             },
+            "text_MUPair": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<h5><br/><strong>🚚 Estimated Delivery</strong><br/><br/>Dubai: 1–3 business days<br/><br/>Other Emirates: 2–5 business days<br/><br/>Orders are processed within 1–3 business days.<br/><br/></h5>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "Product description",
@@ -269,6 +295,7 @@
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "payment_icons_dRt4VH",
+            "text_MUPair",
             "text_aEtTtq"
           ]
         }
